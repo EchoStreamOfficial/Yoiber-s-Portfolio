@@ -1,0 +1,425 @@
+/* General Styles */
+* {
+    transition: all .5s;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    transition: all .5s;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #444, #222);
+    color: #333;
+    overflow: hidden;
+    height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+.page {
+    transition: all .5s;
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #444, #222);
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Smooth transition for page load */
+}
+
+.page.active {
+    transition: all .5s;
+    display: flex;
+    opacity: 1; /* Visible when active */
+}
+
+/* Card Animation */
+.card {
+    transition: all .5s;
+    background: #555; /* White background for cards */
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInCard 0.8s forwards;
+}
+
+.card:hover {
+    transition: all .5s;
+    transform: scale(1.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInCard {
+    to {
+        transition: all .5s;
+        opacity: 1;
+    }
+}
+
+h1, h2 {
+    transition: all .5s;
+    font-size: 2rem;
+    color: #999; /* Dark gray-blue */
+}
+
+/* Paragraph and List Styles */
+p {
+    transition: all .5s;
+    font-size: 1.1rem;
+    color: #888; /* Medium gray */
+}.card:hover > p {
+    transition: all .5s;
+    font-size: 1.1rem;
+    color: gold;
+    text-shadow: 0px 0px 5px gold;
+}
+
+ul {
+    transition: all .5s;
+    list-style-type: none;
+    padding: 10px;
+}
+
+ul li {
+    transition: all .5s;
+    margin-bottom: 10px;
+}
+
+/* Hero Section Styles */
+#page1 {
+    transition: all .5s;
+    background-color: #ecf0f1; /* Light gray */
+}
+
+#page1 .card {
+    transition: all .5s;
+    text-align: center;
+}
+
+#page1 h1 {
+    transition: all .5s;
+    font-size: 3rem;
+    color: #777;
+}.card:hover h1#name {
+    transition: all .5s;
+    font-size: 3rem;
+    color: #31c7e2;
+    text-shadow: 0px 0px 10px #31c7e2;
+}.card:hover h2#skills-title {
+    transition: all .5s;
+    font-size: 3rem;
+    color: #31c7e2;
+    text-shadow: 0px 0px 10px #31c7e2;
+}.card:hover h2#contact-title {
+    transition: all .5s;
+    font-size: 3rem;
+    color: #31c7e2;
+    text-shadow: 0px 0px 10px #31c7e2;
+}
+
+/* Skills Section Styles */
+#page2 {
+    transition: all .5s;
+    background-color: #ffffff; /* White background */
+}
+
+#page2 .card {
+    transition: all .5s;
+    text-align: left;
+}
+
+#page2 ul {
+    transition: all .5s;
+    text-align: left;
+    list-style-type: none;
+    padding-left: 20px;
+}
+li {
+    transition: all .5s;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+/* Contact Section Styles */
+#page3 {
+    transition: all .5s;
+    background-color: #f7f7f7; /* Very light gray */
+}
+
+#page3 .card p {
+    transition: all .5s;
+    font-size: 1.1rem;
+}
+
+#page3 .card a {
+    transition: all .5s;
+    text-decoration: none;
+    color: #3498db; /* Light blue for links */
+}
+
+/* Projects Section Styles */
+#page4 {
+    transition: all .5s;
+    background-color: #ffffff; /* White background */
+}
+
+#page4 .card {
+    transition: all .5s;
+    text-align: left;
+}
+
+#page4 ul {
+    transition: all .5s;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#page4 ul li {
+    transition: all .5s;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Navigation Buttons */
+.navBtn {
+    transition: all .5s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background with slight transparency */
+    border: none;
+    border-radius: 10px;
+    font-size: 2rem;
+    padding: 15px;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s ease;
+}
+
+.navBtn:focus {
+    transition: all .5s;
+    outline: none;
+}
+
+#prevBtn {
+    transition: all .5s;
+    right: 80px;
+}
+
+.navBtn:hover {
+    transition: all .5s;
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+.navBtn:active {
+    transition: all .5s;
+    transform: scale(1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Language Button */
+.langBtn {
+    transition: all .5s;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f4f6f9; /* Blue background */
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.langBtn:hover {
+    transition: all .5s;
+    background-color: #333; /* Darker blue on hover */
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Color for Programming Languages */
+
+#portfolio, #webpages, #python-apps {
+    transition: all .5s;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Opacity for Buttons when on First or Last Page */
+.navBtn.inactive {
+    transition: all .5s;
+    opacity: 0.2;
+}
+
+/* Smooth scroll effect */
+html {
+    transition: all .5s;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Scroll animation */
+@keyframes scrollAnimation {
+    0% {
+        transition: all .5s;
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transition: all .5s;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.page.active {
+    transition: all .5s;
+    animation: scrollAnimation 1s ease-in-out;
+}
+
+/* Texts */
+#portfolio {
+    transition: all .5s;
+    color: #666;
+}
+
+#webpages {
+    transition: all .5s;
+    color: #666;
+}
+
+#python-apps {
+    transition: all .5s;
+    color: #666;
+}
+
+.card > ul > li {
+    color: #666;
+}.card:hover > ul > li {
+    color: #aaff49;
+    text-shadow: 0px 0px 10px #aaff49;
+}.card:hover > ul > li#portfolio {
+    color: #aaff49;
+    text-shadow: 0px 0px 10px #aaff49;
+}.card:hover > ul > li#webpages {
+    color: #aaff49;
+    text-shadow: 0px 0px 10px #aaff49;
+}.card:hover > ul > li#python-apps {
+    color: #aaff49;
+    text-shadow: 0px 0px 10px #aaff49;
+}.card:hover > #email {
+    color: #3594d4;
+    text-shadow: 0px 0px 10px #3594d4;
+    transition: all .5s;
+}
+
+#pricing {
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.card {
+    transition: all .5s;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+    animation: fadeInCard 0.8s forwards;
+    overflow: scroll;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e1e1e1;
+}
+
+#note {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: none;
+    }
+
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+
+    .navBtn {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .langBtn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .page {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    .navBtn {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    .langBtn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 20px;
+    }
+}
